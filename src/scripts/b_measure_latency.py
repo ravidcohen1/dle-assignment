@@ -1,8 +1,8 @@
 from pathlib import Path
 from typing import Any
 
-from utils.config_utils import load_config
-from utils.latency_utils import measure_latency_with_cache, plot_latencies
+from src.utils.config_utils import load_config
+from src.utils.latency_utils import measure_latency_with_cache, plot_latencies
 
 PLOTS_DIR = Path(__file__).parent.parent.parent / "plots"
 

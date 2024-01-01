@@ -1,7 +1,5 @@
-import sys
-
-from model.transformer import get_model_from_config
-from utils.config_utils import load_config
+from src.model.transformer import get_model_from_config
+from src.utils.config_utils import load_config
 
 if __name__ == "__main__":
     config = load_config()

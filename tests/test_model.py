@@ -1,9 +1,9 @@
 import torch
 
-from model.attention import Attention, AttentionHead
-from model.embedding import SequenceEmbedding
-from model.mlp import MLPBlock
-from model.transformer import Transformer, TransformerLayer
+from src.model.attention import Attention, AttentionHead
+from src.model.embedding import SequenceEmbedding
+from src.model.mlp import MLPBlock
+from src.model.transformer import Transformer, TransformerLayer
 
 
 def overfit_module(

@@ -3,7 +3,7 @@ from pathlib import Path
 
 import torch
 
-from model.transformer import get_model_from_config
+from src.model.transformer import get_model_from_config
 from utils.config_utils import load_config
 
 WEIGHTS_DIR = Path(__file__).parent.parent.parent / "weights"

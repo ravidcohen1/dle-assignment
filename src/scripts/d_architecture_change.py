@@ -4,7 +4,7 @@ from typing import Any
 import numpy as np
 import torch
 
-from model.transformer import get_model_from_config
+from src.model.transformer import get_model_from_config
 from utils.config_utils import load_config
 from utils.latency_utils import measure_latency_with_cache
 

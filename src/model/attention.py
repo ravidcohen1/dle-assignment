@@ -30,7 +30,7 @@ class AttentionHead(nn.Module):
         value = self.value(x)
         weights_logits = query @ key.T
         if self.scale_attention:
-            weights_logits = weights_logits / self.hidden_dim**0.5
+            weights_logits = weights_logits / (self.hidden_dim**0.5)
         masked_weights_logits = weights_logits.clone()
 
         # Apply the mask

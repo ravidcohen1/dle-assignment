@@ -32,9 +32,9 @@ class Transformer(nn.Module):
         mlp_hidden_dim,
         vocab_size,
         eps,
-        scale_attention,
-        gelu_approximation,
-        transformer_forward_alternative,
+        scale_attention=True,
+        gelu_approximation="none",
+        transformer_forward_alternative="none",
     ):
         super().__init__()
         self.embedding = SequenceEmbedding(vocab_size, input_len, embedding_dim)
@@ -75,9 +75,9 @@ class TransformerLayer(nn.Module):
         num_heads,
         mlp_hidden_dim,
         eps,
-        scale_attention,
-        gelu_approximation,
-        transformer_forward_alternative,
+        scale_attention=True,
+        gelu_approximation="none",
+        transformer_forward_alternative="none",
     ):
         """
         A single transformer layer. Both input and output shapes are (input_len, input_dim)

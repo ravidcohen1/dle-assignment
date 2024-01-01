@@ -1,8 +1,10 @@
-import sys
+from pathlib import Path
 from typing import Any
 
 from utils.config_utils import load_config
 from utils.latency_utils import measure_latency_with_cache, plot_latencies
+
+PLOTS_DIR = Path(__file__).parent.parent.parent / "plots"
 
 
 def measure_config_effect(config: dict, variable_name: str, variable_values: list[Any]):
@@ -22,7 +24,7 @@ def measure_config_effect(config: dict, variable_name: str, variable_values: lis
         latencies.append(t)
 
     config[variable_name] = original_value
-    plot_dest = f"../plots/{variable_name}_latency.png"
+    plot_dest = PLOTS_DIR / f"{variable_name}_latency.png"
     plot_latencies(
         latencies,
         variable_name,

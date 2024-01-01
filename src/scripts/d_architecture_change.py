@@ -1,4 +1,4 @@
-import json
+from pathlib import Path
 from typing import Any
 
 import numpy as np
@@ -7,6 +7,8 @@ import torch
 from model.transformer import get_model_from_config
 from utils.config_utils import load_config
 from utils.latency_utils import measure_latency_with_cache
+
+WEIGHTS_DIR = Path(__file__).parent.parent.parent / "weights"
 
 
 def inference_example(model, examples: list[dict]):
@@ -77,13 +79,13 @@ def measure_a_single_change(
 
 if __name__ == "__main__":
     config = load_config()
-    examples = torch.load("weights/example_outputs.pt")
+    examples = torch.load(WEIGHTS_DIR / "example_outputs.pt")
 
-    # measure_a_single_change(config, "epsilon", "1e-4", examples)
-    # print()
-    # measure_a_single_change(config, "scale_attention", False, examples)
-    # print()
-    # measure_a_single_change(config, "gelu_approximation", 'tanh', examples)
+    measure_a_single_change(config, "epsilon", "1e-4", examples)
+    print()
+    measure_a_single_change(config, "scale_attention", False, examples)
+    print()
+    measure_a_single_change(config, "gelu_approximation", "tanh", examples)
     print()
     measure_a_single_change(config, "transformer_forward_alternative", "1", examples)
     print()

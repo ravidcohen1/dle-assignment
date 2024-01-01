@@ -4,7 +4,11 @@ from torch import nn
 
 class AttentionHead(nn.Module):
     def __init__(
-        self, input_len: int, input_dim: int, hidden_dim: int, scale_attention: bool
+        self,
+        input_len: int,
+        input_dim: int,
+        hidden_dim: int,
+        scale_attention: bool = True,
     ):
         """
         A single attention head. Both input and output shapes are (input_len, input_dim)
@@ -26,7 +30,7 @@ class AttentionHead(nn.Module):
         value = self.value(x)
         weights_logits = query @ key.T
         if self.scale_attention:
-            weights_logits /= self.hidden_dim**0.5
+            weights_logits = weights_logits / self.hidden_dim**0.5
         masked_weights_logits = weights_logits.clone()
 
         # Apply the mask
@@ -46,7 +50,7 @@ class Attention(nn.Module):
         input_dim: int,
         hidden_dim: int,
         num_heads: int,
-        scale_attention: bool,
+        scale_attention: bool = True,
     ):
         super().__init__()
         self.attention_heads = nn.ModuleList(

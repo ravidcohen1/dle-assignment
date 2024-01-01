@@ -1,9 +1,12 @@
 import json
+from pathlib import Path
 
 import torch
 
 from model.transformer import get_model_from_config
 from utils.config_utils import load_config
+
+WEIGHTS_DIR = Path(__file__).parent.parent.parent / "weights"
 
 
 def load_model_weights(model, weights_path, key_mapping_path):
@@ -68,9 +71,7 @@ if __name__ == "__main__":
     config["attention_hidden_dim"] = 256
 
     model = get_model_from_config(config)
-    with open("weights/my_model.pt", "wb") as f:
-        torch.save(model.state_dict(), f)
     load_model_weights(
-        model, "weights/dummy_gpt2_model.pt", "weights/keys_mapping.json"
+        model, WEIGHTS_DIR / "dummy_gpt2_model.pt", WEIGHTS_DIR / "keys_mapping.json"
     )
-    verify_model_on_examples(model, "weights/example_outputs.pt")
+    verify_model_on_examples(model, WEIGHTS_DIR / "example_outputs.pt")

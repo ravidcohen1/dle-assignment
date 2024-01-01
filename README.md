@@ -1,7 +1,7 @@
 # dle-assignment
 
 To run this project, you need to install the requirements in `requirements.txt` (use python 3.10) and download the weights and put them in the `weights` folder.
-```angular2html
+
 ## Implementation
 
 Running `python scripts/a_implement.py` prints the number of the parameters and the size of the model in MB.

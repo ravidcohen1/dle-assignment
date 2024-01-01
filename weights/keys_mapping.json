@@ -1,0 +1,72 @@
+{
+    "transformer.word_embeddings.weight": "embedding.word_embedding.embedding",
+    "transformer.positional_embeddings.weight": "embedding.position_embedding.embedding",
+
+    "transformer.h.0.pre_attn_ln.weight": "transformer_layers.0.norm1.weight",
+    "transformer.h.0.pre_attn_ln.bias": "transformer_layers.0.norm1.bias",
+    "transformer.h.0.attn.qkv_proj.weight": [
+        "transformer_layers.0.attention.attention_heads.0.query.weight",
+        "transformer_layers.0.attention.attention_heads.0.key.weight",
+        "transformer_layers.0.attention.attention_heads.0.value.weight"
+    ],
+    "transformer.h.0.attn.qkv_proj.bias": [
+        "transformer_layers.0.attention.attention_heads.0.query.bias",
+        "transformer_layers.0.attention.attention_heads.0.key.bias",
+        "transformer_layers.0.attention.attention_heads.0.value.bias"
+    ],
+    "transformer.h.0.attn.out_proj.weight": "transformer_layers.0.attention.output_projection.weight",
+    "transformer.h.0.attn.out_proj.bias": "transformer_layers.0.attention.output_projection.bias",
+    "transformer.h.0.pre_mlp_ln.weight": "transformer_layers.0.norm2.weight",
+    "transformer.h.0.pre_mlp_ln.bias": "transformer_layers.0.norm2.bias",
+
+    "transformer.h.0.mlp.up_proj.weight": "transformer_layers.0.mlp.fc1.weight",
+    "transformer.h.0.mlp.up_proj.bias": "transformer_layers.0.mlp.fc1.bias",
+    "transformer.h.0.mlp.down_proj.weight": "transformer_layers.0.mlp.fc2.weight",
+    "transformer.h.0.mlp.down_proj.bias": "transformer_layers.0.mlp.fc2.bias",
+
+    "lm_head.weight": "lm_head",
+        "transformer.h.1.pre_attn_ln.weight": "transformer_layers.1.norm1.weight",
+    "transformer.h.1.pre_attn_ln.bias": "transformer_layers.1.norm1.bias",
+    "transformer.h.1.attn.qkv_proj.weight": [
+        "transformer_layers.1.attention.attention_heads.0.query.weight",
+        "transformer_layers.1.attention.attention_heads.0.key.weight",
+        "transformer_layers.1.attention.attention_heads.0.value.weight"
+    ],
+    "transformer.h.1.attn.qkv_proj.bias": [
+        "transformer_layers.1.attention.attention_heads.0.query.bias",
+        "transformer_layers.1.attention.attention_heads.0.key.bias",
+        "transformer_layers.1.attention.attention_heads.0.value.bias"
+    ],
+    "transformer.h.1.attn.out_proj.weight": "transformer_layers.1.attention.output_projection.weight",
+    "transformer.h.1.attn.out_proj.bias": "transformer_layers.1.attention.output_projection.bias",
+    "transformer.h.1.pre_mlp_ln.weight": "transformer_layers.1.norm2.weight",
+    "transformer.h.1.pre_mlp_ln.bias": "transformer_layers.1.norm2.bias",
+    "transformer.h.1.mlp.up_proj.weight": "transformer_layers.1.mlp.fc1.weight",
+    "transformer.h.1.mlp.up_proj.bias": "transformer_layers.1.mlp.fc1.bias",
+    "transformer.h.1.mlp.down_proj.weight": "transformer_layers.1.mlp.fc2.weight",
+    "transformer.h.1.mlp.down_proj.bias": "transformer_layers.1.mlp.fc2.bias",
+    
+    "transformer.h.2.pre_attn_ln.weight": "transformer_layers.2.norm1.weight",
+    "transformer.h.2.pre_attn_ln.bias": "transformer_layers.2.norm1.bias",
+    "transformer.h.2.attn.qkv_proj.weight": [
+        "transformer_layers.2.attention.attention_heads.0.query.weight",
+        "transformer_layers.2.attention.attention_heads.0.key.weight",
+        "transformer_layers.2.attention.attention_heads.0.value.weight"
+    ],
+    "transformer.h.2.attn.qkv_proj.bias": [
+        "transformer_layers.2.attention.attention_heads.0.query.bias",
+        "transformer_layers.2.attention.attention_heads.0.key.bias",
+        "transformer_layers.2.attention.attention_heads.0.value.bias"
+    ],
+    "transformer.h.2.attn.out_proj.weight": "transformer_layers.2.attention.output_projection.weight",
+    "transformer.h.2.attn.out_proj.bias": "transformer_layers.2.attention.output_projection.bias",
+    "transformer.h.2.pre_mlp_ln.weight": "transformer_layers.2.norm2.weight",
+    "transformer.h.2.pre_mlp_ln.bias": "transformer_layers.2.norm2.bias",
+    "transformer.h.2.mlp.up_proj.weight": "transformer_layers.2.mlp.fc1.weight",
+    "transformer.h.2.mlp.up_proj.bias": "transformer_layers.2.mlp.fc1.bias",
+    "transformer.h.2.mlp.down_proj.weight": "transformer_layers.2.mlp.fc2.weight",
+    "transformer.h.2.mlp.down_proj.bias": "transformer_layers.2.mlp.fc2.bias",
+
+    "transformer.final_ln.weight": "norm.weight",
+    "transformer.final_ln.bias": "norm.bias"
+}

@@ -97,3 +97,9 @@ Mean Absolute Difference: 0.1258
 Standard Deviation of Absolute Differences: 0.1116
 Percentage First Greater: 52.06%
 ```
+
+## Matrix Multiplication
+
+[parallel_mat_mul.py](src%2Fmat_mul%2Fparallel_mat_mul.py) is my implementation for parallel matrix multiplication.
+This script runs correctness validation and compare the speedup to the naive implementation. I tried to make it recursive 
+but I got this error `AssertionError: daemonic processes are not allowed to have children`.
